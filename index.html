@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cover Letter Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>📝 Cover Letter Generator</h1>
+            <p>Create professional cover letters in seconds</p>
+        </header>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Form Section -->
+            <div class="form-section">
+                <h2>Your Details</h2>
+                <form id="coverLetterForm">
+                    <!-- Candidate Name -->
+                    <div class="form-group">
+                        <label for="candidateName">Your Name *</label>
+                        <input 
+                            type="text" 
+                            id="candidateName" 
+                            name="candidateName" 
+                            placeholder="John Doe"
+                            required
+                        >
+                    </div>
+
+                    <!-- Job Role -->
+                    <div class="form-group">
+                        <label for="jobRole">Job Role *</label>
+                        <input 
+                            type="text" 
+                            id="jobRole" 
+                            name="jobRole" 
+                            placeholder="Software Engineer"
+                            required
+                        >
+                    </div>
+
+                    <!-- Target Company -->
+                    <div class="form-group">
+                        <label for="targetCompany">Company *</label>
+                        <input 
+                            type="text" 
+                            id="targetCompany" 
+                            name="targetCompany" 
+                            placeholder="Google"
+                            required
+                        >
+                    </div>
+
+                    <!-- Key Skills -->
+                    <div class="form-group">
+                        <label for="keySkills">Your Skills * (comma separated)</label>
+                        <input 
+                            type="text" 
+                            id="keySkills" 
+                            name="keySkills" 
+                            placeholder="JavaScript, HTML, CSS"
+                            required
+                        >
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" id="generateBtn">
+                        Generate Cover Letter
+                    </button>
+                </form>
+            </div>
+
+            <!-- Preview Section -->
+            <div class="preview-section">
+                <h2>Your Cover Letter</h2>
+                
+                <!-- Loading State -->
+                <div class="loading-state" id="loadingState" style="display: none;">
+                    <div class="spinner"></div>
+                    <p>Generating your cover letter...</p>
+                </div>
+
+                <!-- Generated Letter -->
+                <div class="letter-preview" id="letterPreview">
+                    <div class="empty-state">
+                        <span class="empty-icon">📝</span>
+                        <p>Your cover letter will appear here</p>
+                        <small>Fill out the form and click Generate</small>
+                    </div>
+                </div>
+
+                <!-- Action Buttons (hidden until letter generated) -->
+                <div class="action-buttons" id="actionButtons" style="display: none;">
+                    <button id="copyBtn" class="btn-copy">
+                        📋 Copy to Clipboard
+                    </button>
+                    <button id="newBtn" class="btn-new">
+                        🔄 Generate New
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Notification Toast -->
+        <div class="toast" id="toast" style="display: none;">
+            <span class="toast-message"></span>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
