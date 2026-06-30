@@ -2,7 +2,7 @@
 A clean, professional web application that generates personalized cover letters based on user input.
 
 ## 🔗 Live Demo
-Check out the live demo: [Cover Letter Generator]([https://your-live-link.com](https://magenta-zabaione-598e60.netlify.app/))
+Check out the live demo: [(https://magenta-zabaione-598e60.netlify.app/)]
 
 
 ## ✨ Features
